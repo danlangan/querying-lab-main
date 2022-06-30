@@ -297,8 +297,13 @@ def problem_six(request):
     # Make sure to set this equal to the primary key of the row you just created!
     student_id = 11
 
-
-
+    new_student_gpa_update = Student.objects.filter(id=11).update(gpa__=3.75)
+    new_student_gpa_update = Student.object.filter(id=11).get()
+    print(f'''
+    Id: {new_student_gpa_update.id}
+    Full Name: {new_student_gpa_update.first_name} {new_student_gpa_update.last_name}
+    GPA: {new_student_gpa_update.gpa}
+    ''')
     return complete(request)
 
 
