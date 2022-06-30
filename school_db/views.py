@@ -202,6 +202,7 @@ SELECT `school_db_instructor`.`id`,
 
 # Get the count of students, courses, and instructors and print them in the terminal
 def problem_four(request):
+  print('this is a test to see if this is working or not')
   student_count = Student.objects.count()
   course_count = Course.objects.count()
   instructor_count = Instructor.objects.count()
@@ -351,7 +352,7 @@ def problem_seven(request):
     # Make sure to set this equal to the primary key of the row you just created!
     student_id = 11
 
-    student = Student.objects.filter(id=11).delete()
+    delete_student = Student.objects.filter(id=11).delete()
 
 
     try:
