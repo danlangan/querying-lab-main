@@ -351,7 +351,7 @@ def problem_seven(request):
     # Make sure to set this equal to the primary key of the row you just created!
     student_id = 11
 
-    student_entry_pk_11 = Student.objects.filter(id=11).delete()
+    student = Student.objects.filter(id=11).delete()
 
 
     try:
